@@ -1,10 +1,16 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@swup/head-plugin': ^1.2.0
+  '@swup/slide-theme': ^1.0.5
   astro: ^0.18.0-next.4
+  swup: ^2.0.14
 
 devDependencies:
+  '@swup/head-plugin': 1.2.0
+  '@swup/slide-theme': 1.0.5
   astro: 0.18.0-next.4
+  swup: 2.0.14
 
 packages:
 
@@ -644,6 +650,26 @@ packages:
     transitivePeerDependencies:
       - rollup
       - vue
+    dev: true
+
+  /@swup/head-plugin/1.2.0:
+    resolution: {integrity: sha512-ixtDl5JWNF6aHLLgLNOTpKboUOALuRtOOMi9u38jqPEDRnpJ+gCNeCO6RMBnbfyp45G6ml+fgd6ltrseZ7oOcA==}
+    dependencies:
+      '@swup/plugin': 1.0.1
+    dev: true
+
+  /@swup/plugin/1.0.1:
+    resolution: {integrity: sha512-QrTGn1DLx+50CNsk6oGzUFnyNyLkDK6iLb032qKImmAXS+0Dd1cwa8cSGvJ+I27J4qR8y6oJNurgHIEc6ZCTrg==}
+    dev: true
+
+  /@swup/slide-theme/1.0.5:
+    resolution: {integrity: sha512-0xxqtURSMDScjLMRdNjtxzo8NGCPcmp6VXrQcxIQzQDSAvwNnP8Zw871C+FSL1EMe8OhAzWAP3E3x9vzH+iLHg==}
+    dependencies:
+      '@swup/theme': 1.0.7
+    dev: true
+
+  /@swup/theme/1.0.7:
+    resolution: {integrity: sha512-OINEaf34fYs90l7/YUUKfOf+paY7/FDhOBLwYxrD0w1OjBiItZpw3N+ATA/QklJwmoUu3KkDFOaQG0zT4KxmmA==}
     dev: true
 
   /@szmarczak/http-timer/4.0.6:
@@ -1534,6 +1560,10 @@ packages:
   /delayed-stream/1.0.0:
     resolution: {integrity: sha1-3zrhmayt+31ECqrgsp4icrJOxhk=}
     engines: {node: '>=0.4.0'}
+    dev: true
+
+  /delegate/3.1.3:
+    resolution: {integrity: sha1-moJRp3fXAl+qVXN7w7BxdCEnqf0=}
     dev: true
 
   /delegates/1.0.0:
@@ -3295,6 +3325,11 @@ packages:
       is-wsl: 2.2.0
     dev: true
 
+  /opencollective-postinstall/2.0.3:
+    resolution: {integrity: sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==}
+    hasBin: true
+    dev: true
+
   /os-homedir/1.0.2:
     resolution: {integrity: sha1-/7xJiDNuDoM94MFox+8VISGqf7M=}
     engines: {node: '>=0.10.0'}
@@ -4410,6 +4445,14 @@ packages:
   /svelte/3.40.2:
     resolution: {integrity: sha512-FrxVBISeRK0fEeg17D5TftKpaFTLPS7S1C+hf21w5gzzi11MlkJZdqJ9XYmPkAeLGeVpQSQDyWET65NVJjTJ4A==}
     engines: {node: '>= 8'}
+    dev: true
+
+  /swup/2.0.14:
+    resolution: {integrity: sha512-a+Ihye+rTOwyW7T/vJYwGEKy9kJwc4twwlBryoKZY6WNutQOdpWUKmCkJdvkrDNIqBAvIqpsGUW1NJvoxZxP8w==}
+    requiresBuild: true
+    dependencies:
+      delegate: 3.1.3
+      opencollective-postinstall: 2.0.3
     dev: true
 
   /tar/6.1.1:

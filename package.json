@@ -7,7 +7,10 @@
     "build": "astro build"
   },
   "devDependencies": {
-    "astro": "^0.18.0-next.4"
+    "@swup/head-plugin": "^1.2.0",
+    "@swup/slide-theme": "^1.0.5",
+    "astro": "^0.18.0-next.4",
+    "swup": "^2.0.14"
   },
   "snowpack": {
     "workspaceRoot": "../.."
