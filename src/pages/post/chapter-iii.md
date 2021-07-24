@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/post.astro
+layout: ../../layouts/Post.astro
 title: Chapter III
 tag: movie
 date: 2021-05-19

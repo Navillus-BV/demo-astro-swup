@@ -1,0 +1,37 @@
+---
+import MainHead from '../components/MainHead.astro';
+import Nav from '../components/Nav.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  next?: string;
+  prev?: string;
+  canonicalURL?: string;
+}
+
+const { title, description, image, next, prev, canonicalURL } = Astro.props as Props;
+---
+
+<html lang="en">
+  <head>
+    <title>{title}</title>
+    <MainHead
+      title={title}
+      description={description}
+      image={image}
+      next={next}
+      prev={prev}
+      canonicalURL={canonicalURL}
+    />
+  </head>
+
+  <body>
+    <Nav title={title} />
+
+    <main id="swup" class="wrapper">
+      <slot />
+    </main>
+  </body>
+</html>

@@ -1,7 +1,6 @@
 ---
 // Component Imports
-import MainHead from '../components/MainHead.astro';
-import Nav from '../components/Nav.astro';
+import Layout from '../layouts/Main.astro';
 import PostPreview from '../components/PostPreview.astro';
 import Pagination from '../components/Pagination.astro';
 import authorData from '../data/authors.json';
@@ -21,26 +20,10 @@ let firstPage = allPosts.slice(0, 2);
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
-<html lang="en">
-  <head>
-    <title>{title}</title>
-    <MainHead
-      title={title}
-      description={description}
-      image={allPosts[0].image}
-      canonicalURL={Astro.request.canonicalURL.href}
-    />
-  </head>
+<Layout title={title} description={description} image={allPosts[0].image} canonicalURL={Astro.request.canonicalURL.href}>
+  {allPosts.map((post) => <PostPreview post={post} author={authorData[post.author]} />)}
 
-  <body>
-    <Nav />
-
-    <main class="wrapper">
-      {allPosts.map((post) => <PostPreview post={post} author={authorData[post.author]} />)}
-    </main>
-
-    <footer>
-      <Pagination nextUrl="/posts/2" />
-    </footer>
-  </body>
-</html>
+  <footer>
+    <Pagination nextUrl="/posts/2" />
+  </footer>
+</Layout>
